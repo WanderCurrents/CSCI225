@@ -2,14 +2,144 @@
 
 <html lang="en">
     <head>
-        <title>CSCI225 Homepage - Andrew Stevens</title>
+        <title>CSCI225 Homepage of Andrew Stevens</title>
         <meta charset="UTF-8">
+        <!-- Nav element moved to body for valid HTML -->
     </head>
 
     <body>
-        <p>
-            Welcome to my page for CSCI225!
-        </p>
+        <!-- Note: nav moved to body for valid HTML (nav elements must be in body, not head) -->
+        <nav>
+            <ul>
+                <li><a href="https://www.usca.edu/">Go to USCA</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="https://github.com/WanderCurrents">GitHub Profile</a></li>
+                <li><a href="https://www.instagram.com/andrewstevensphotos/">Personal Photography Page</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="introduction">
+                <h2 id="introduction">Introduction</h2>
+                <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature. I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
+                <img src="img/IMG_1781.jpg" alt="A rally car racing through dirt">
+            </section>
+            <section class="portfolio">
+                <h2 id="portfolio">Portfolio</h2>
+                <ul>
+                    <li><a href="https://github.com/WanderCurrents/X-Handler-Prototype">XML Handler Prototype (Java)</a>
+                        <ul>
+                            <li><b>Description:</b> A simple Java project that handles <abbr title="Extensible Markup Language">XML</abbr> data files. Designed in preparation for future project.</li>
+                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>, Eclipse, git & Github</i></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/WanderCurrents/bus-planning-system">Bus Planning System (Java)</a>
+                        <ul>
+                            <li><b>Description:</b> A Java application that emulates a bus planning system. Created as a group project in a software engineering class. Featured <abbr title="Extensible Markup Language">XML</abbr> handling and data persistence, automatic routing, automatic station creation, user management, bus and station management, and a simple console interface.</li>
+                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>, Eclipse, git & Github, group work/leadership</i></li>
+                        </ul>
+                    </li>
+                    <li>Homelab
+                        <ul>
+                            <li><b>Description:</b> A personal homelab setup for experimenting with various technologies and projects. Also used for hosting certain personal services.</li>
+                            <li><b>Technologies:</b> <i>Networking, Virtualization, Linux</i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="schedule">
+                <h2 id="schedule">Schedule</h2>
+                <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified and vague.</em></strong></p>
+                <!-- I know these attributes are deprecated, but they work for this simple page without CSS -->
+                <table border="1">
+                    <tr>
+                        <td width="100" height="25"></td>
+                        <td width="100">Monday</td>
+                        <td width="100">Tuesday</td>
+                        <td width="100">Wednesday</td>
+                        <td width="100">Thursday</td>
+                        <td width="100">Friday</td>
+                    </tr>
+                    <tr>
+                        <td height="50">9:00AM</td>
+                        <td rowspan="3" bgcolor="lightblue">Work</td>
+                        <td bgcolor="lightblue">Work</td>
+                        <td rowspan="3" bgcolor="lightblue">Work</td>
+                        <td bgcolor="lightblue">Work</td>
+                        <td rowspan="4" bgcolor="lightblue">Work</td>
+                    </tr>
+                    <tr>
+                        <td height="50">10:00AM</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">11:00AM</td>
+                        <td bgcolor="lightgreen">Class</td>
+                        <td bgcolor="lightgreen">Class</td>
+                    </tr>
+                    <tr>
+                        <td height="50">12:00PM</td>
+                        <td bgcolor="lightgreen">Class</td>
+                        <td></td>
+                        <td bgcolor="lightgreen">Class</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">1:00PM</td>
+                        <td></td>
+                        <td rowspan="3" bgcolor="lightblue">Work</td>
+                        <td></td>
+                        <td rowspan="3" bgcolor="lightblue">Work</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">2:00PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">3:00PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">4:00PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td height="50">5:00PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <aside id="assignments">
+            <h2>Assignment</h2>
+            <ol>
+                <li><a href="doc/Assignment1.pdf">Assignment 1</a></li>
+            </ol>
+        </aside>
+        <footer>
+            <section class="contact">
+                <address>
+                    <p><b>Contact Information</b></p>
+                    <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/" target="_blank">@andrewstevensphotos</a></p>
+                    <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>
+                </address>
+            </section>
+        </footer>
     </body>
 
 </html>
