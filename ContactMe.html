@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Contact Me</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <video src="img/20260228_095215.mp4" controls width="360" height="680"></video>
+    <h2>Feedback</h2>
+    <form name="feedback" action="fake.php">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="anonymous" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="anonymous" required>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" placeholder="name@domain.com" required>
+        </div>
+
+        <div>
+            <p>Would you recommend this site to a friend?</p>
+            <input type="radio" id="yes_recommend" name="recommend" value="yes">
+            <label for="yes_recommend">Yes</label>
+            <input type="radio" id="no_recommend" name="recommend" value="no">
+            <label for="no_recommend">No</label>
+        </div>
+
+        <div>
+            <label for="fav_website">What is your favorite website?</label>
+            <select name="fav_website" id="fav_website">
+                <option value="google">Google</option>
+                <option value="facebook">Facebook</option>
+                <option value="twitter">Twitter</option>
+                <option value="msn">MSN</option>
+                <option value="youtube">YouTube</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="rating">Please rate the website (1-10):</label>
+            1<input type="range" name="rating" id="rating" min="1" max="10" value="5" step="1">10
+        </div>
+
+        <div>
+            <label for="comment">Leave additional comments:</label>
+            <br>
+            <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Other HTML5 Form Features -->
+        <div>
+            <label for="color">Choose your favorite color:</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <label for="fav_number">What is your favorite number?</label>
+            <input type="number" name="fav_number" id="fav_number" min="1" max="100">
+        </div>
+        <div>
+            <label for="vibe_month">Choose a month you vibe with:</label>
+            <input type="month" name="vibe_month" id="vibe_month">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
