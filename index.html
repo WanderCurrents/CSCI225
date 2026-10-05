@@ -4,29 +4,33 @@
     <head>
         <title>CSCI225 Homepage of Andrew Stevens</title>
         <meta charset="UTF-8">
-        <!-- Nav element moved to body for valid HTML -->
+        <link rel="stylesheet" href="css/home.css">
     </head>
 
     <body>
-        <!-- Note: nav moved to body for valid HTML (nav elements must be in body, not head) -->
-        <nav>
-            <ul>
-                <li><a href="https://www.usca.edu/">Go to USCA</a></li>
-                <li><a href="#assignments">Assignments</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="https://github.com/WanderCurrents">GitHub Profile</a></li>
-                <li><a href="https://www.instagram.com/andrewstevensphotos/">Personal Photography Page</a></li>
-            </ul>
-        </nav>
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="https://www.usca.edu/">Go to USCA</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="https://github.com/WanderCurrents">GitHub Profile</a></li>
+                    <li><a href="https://www.instagram.com/andrewstevensphotos/">Personal Photography Page</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="img/IMG_1781.jpg" alt="A rally car racing through dirt" id="background-image">
         <main>
             <section class="introduction">
                 <h2 id="introduction">Introduction</h2>
-                <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature. I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
-                <img src="img/IMG_1781.jpg" alt="A rally car racing through dirt">
+                <div>
+                    <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature. I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
+                </div>  
             </section>
             <section class="portfolio">
                 <h2 id="portfolio">Portfolio</h2>
-                <ul>
+                <div>
+                    <ul>
                     <li><a href="https://github.com/WanderCurrents/X-Handler-Prototype">XML Handler Prototype (Java)</a>
                         <ul>
                             <li><b>Description:</b> A simple Java project that handles <abbr title="Extensible Markup Language">XML</abbr> data files. Designed in preparation for future project.</li>
@@ -46,10 +50,12 @@
                         </ul>
                     </li>
                 </ul>
+                </div>
             </section>
             <section class="schedule">
                 <h2 id="schedule">Schedule</h2>
-                <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified and vague.</em></strong></p>
+                <div>
+                    <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified and vague.</em></strong></p>
                 <!-- I know these attributes are deprecated, but they work for this simple page without CSS -->
                 <table border="1">
                     <tr>
@@ -122,19 +128,22 @@
                         <td></td>
                     </tr>
                 </table>
+                </div>
             </section>
         </main>
-        <aside id="assignments">
-            <h2>Assignment</h2>
-            <ol>
+        <aside class="assignments">
+            <h2 id="assignments">Assignment</h2>
+            <div>
+                <ol>
                 <li><a href="doc/Assignment1.pdf">Assignment 1</a></li>
                 <li><a href="ContactMe.html">Contact Me</a></li>
-            </ol>
+                </ol>
+            </div>
         </aside>
         <footer>
             <section class="contact">
                 <address>
-                    <p><b>Contact Information</b></p>
+                    <h2 id="contact"><b>Contact Information</b></h2>
                     <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
                     <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/" target="_blank">@andrewstevensphotos</a></p>
                     <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>

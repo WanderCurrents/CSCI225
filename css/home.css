@@ -1,0 +1,112 @@
+
+/* Global variables */
+:root{
+    --theme-orange: hsl(34, 99%, 36%);
+    --theme-white: white;
+    --color-nav-bar: var(--theme-orange);
+    --color-nav-font: var(--theme-white);
+    --color-accent: var(--theme-orange);
+    --color-main-font: var(--theme-white);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav bar stuff */
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-nav-bar);
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-nav-font);
+    font-size: 1.2em;
+}
+
+/* Background image */
+#background-image{
+    position: fixed;
+    top:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Positioning the different headers */
+#introduction{
+    --pos-top: 10%;
+    --pos-left: 15%;
+}
+#portfolio{
+    --pos-top: 10%;
+    --pos-left: 85%;
+}
+#schedule{
+    --pos-top: 60%;
+    --pos-left: 85%;
+}
+#assignments{
+    --pos-top: 60%;
+    --pos-left: 15%;
+}
+#contact{
+    --pos-top: 80%;
+    --pos-left: 50%;
+    
+}
+
+section h2{
+    position: fixed;    
+    top: var(--pos-top);
+    left: var(--pos-left);
+    transform: translateX(-50%);    /* Makes sure elements are centered */
+    font-style: normal;     /* Normalizes the font style */
+    color: var(--color-main-font);
+    font-size: 3em;
+
+    padding: 5px 70px 5px 70px;
+    border-top: 7px solid var(--color-accent);
+}
+aside h2{
+    position: fixed;
+    top: var(--pos-top);
+    left: var(--pos-left);
+    transform: translateX(-50%);    /* Makes sure elements are centered */
+    font-style: normal;     /* Normalizes the font style */
+    color: var(--color-main-font);
+    font-size: 3em;
+
+    padding: 5px 70px 5px 70px;
+    border-top: 7px solid var(--color-accent);
+}
+
+/* Positioning sections */
+.introduction div{
+    position: fixed;
+    top: 20%;
+    left: 15%;
+    width: 400px;
+    height: 500px;
+    transform: translateX(-50%);
+    
+    color: var(--color-main-font);
+    font-size: 1.5em;
+}
+
