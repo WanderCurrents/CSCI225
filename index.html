@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <title>CSCI225 Homepage of Andrew Stevens</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/home.css">
-    </head>
 
-    <body>
-        <header class="navbar">
-            <nav>
+<head>
+    <title>CSCI225 Homepage of Andrew Stevens</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="grid-container">
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="https://www.usca.edu/">Go to USCA</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="https://github.com/WanderCurrents">GitHub Profile</a></li>
+                <li><a href="https://www.instagram.com/andrewstevensphotos/">Personal Photography Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="img/IMG_1781.jpg" alt="A rally car racing through dirt" id="background-image">
+    <main class="grid-container">
+        <section class="introduction">
+            <h2 id="introduction">Introduction</h2>
+            <div>
+                <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science
+                    (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature.
+                    I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2 id="portfolio">Portfolio</h2>
+            <div>
                 <ul>
-                    <li><a href="https://www.usca.edu/">Go to USCA</a></li>
-                    <li><a href="#assignments">Assignments</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="https://github.com/WanderCurrents">GitHub Profile</a></li>
-                    <li><a href="https://www.instagram.com/andrewstevensphotos/">Personal Photography Page</a></li>
-                </ul>
-            </nav>
-        </header>
-        <img src="img/IMG_1781.jpg" alt="A rally car racing through dirt" id="background-image">
-        <main>
-            <section class="introduction">
-                <h2 id="introduction">Introduction</h2>
-                <div>
-                    <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature. I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
-                </div>  
-            </section>
-            <section class="portfolio">
-                <h2 id="portfolio">Portfolio</h2>
-                <div>
-                    <ul>
-                    <li><a href="https://github.com/WanderCurrents/X-Handler-Prototype">XML Handler Prototype (Java)</a>
+                    <li><a href="https://github.com/WanderCurrents/X-Handler-Prototype">XML Handler Prototype
+                            (Java)</a>
                         <ul>
-                            <li><b>Description:</b> A simple Java project that handles <abbr title="Extensible Markup Language">XML</abbr> data files. Designed in preparation for future project.</li>
-                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>, Eclipse, git & Github</i></li>
+                            <li><b>Description:</b> A simple Java project that handles <abbr
+                                    title="Extensible Markup Language">XML</abbr> data files. Designed in
+                                preparation for future project.</li>
+                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>,
+                                    Eclipse, git & Github</i></li>
                         </ul>
                     </li>
-                    <li><a href="https://github.com/WanderCurrents/bus-planning-system">Bus Planning System (Java)</a>
+                    <li><a href="https://github.com/WanderCurrents/bus-planning-system">Bus Planning System
+                            (Java)</a>
                         <ul>
-                            <li><b>Description:</b> A Java application that emulates a bus planning system. Created as a group project in a software engineering class. Featured <abbr title="Extensible Markup Language">XML</abbr> handling and data persistence, automatic routing, automatic station creation, user management, bus and station management, and a simple console interface.</li>
-                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>, Eclipse, git & Github, group work/leadership</i></li>
+                            <li><b>Description:</b> A Java application that emulates a bus planning system. Created
+                                as a group project in a software engineering class. Featured <abbr
+                                    title="Extensible Markup Language">XML</abbr> handling and data persistence,
+                                automatic routing, automatic station creation, user management, bus and station
+                                management, and a simple console interface.</li>
+                            <li><b>Technologies:</b> <i>Java, <abbr title="Extensible Markup Language">XML</abbr>,
+                                    Eclipse, git & Github, group work/leadership</i></li>
                         </ul>
                     </li>
                     <li>Homelab
                         <ul>
-                            <li><b>Description:</b> A personal homelab setup for experimenting with various technologies and projects. Also used for hosting certain personal services.</li>
+                            <li><b>Description:</b> A personal homelab setup for experimenting with various
+                                technologies and projects. Also used for hosting certain personal services.</li>
                             <li><b>Technologies:</b> <i>Networking, Virtualization, Linux</i></li>
                         </ul>
                     </li>
                 </ul>
-                </div>
-            </section>
-            <section class="schedule">
-                <h2 id="schedule">Schedule</h2>
-                <div>
-                    <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified and vague.</em></strong></p>
+            </div>
+        </section>
+        <section class="schedule">
+            <h2 id="schedule">Schedule</h2>
+            <div id="schedule-content">
+                <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified
+                            and vague.</em></strong></p>
                 <!-- I know these attributes are deprecated, but they work for this simple page without CSS -->
                 <table border="1">
                     <tr>
@@ -128,28 +143,29 @@
                         <td></td>
                     </tr>
                 </table>
-                </div>
-            </section>
-        </main>
-        <aside class="assignments">
-            <h2 id="assignments">Assignment</h2>
-            <div>
-                <ol>
+            </div>
+        </section>
+    </main>
+    <aside class="assignments">
+        <h2 id="assignments-h">Assignment</h2>
+        <div>
+            <ol>
                 <li><a href="doc/Assignment1.pdf">Assignment 1</a></li>
                 <li><a href="ContactMe.html">Contact Me</a></li>
-                </ol>
-            </div>
-        </aside>
-        <footer>
-            <section class="contact">
-                <address>
-                    <h2 id="contact"><b>Contact Information</b></h2>
-                    <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
-                    <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/" target="_blank">@andrewstevensphotos</a></p>
-                    <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>
-                </address>
-            </section>
-        </footer>
-    </body>
+            </ol>
+        </div>
+    </aside>
+    <footer>
+        <section class="contact">
+            <address>
+                <h2 id="contact-h"><b>Contact Information</b></h2>
+                <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/"
+                        target="_blank">@andrewstevensphotos</a></p>
+                <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>
+            </address>
+        </section>
+    </footer>
+</body>
 
 </html>

@@ -9,18 +9,25 @@
     --color-main-font: var(--theme-white);
 }
 
+
 body{
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    /* min-height: 100vh; */
+    display: grid;
+    grid-template-columns: 75px 1fr 2fr 1fr 75px;
+    grid-template-rows: 50px auto auto auto;
+    row-gap: 30px;
 }
 
 /* Nav bar stuff */
 .navbar{
+    grid-column: 1/-1;
+    grid-row: 1;
     display: flex;
     justify-content: center;
     background-color: var(--color-nav-bar);
-    width: 100%;
-    box-sizing: border-box;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -29,6 +36,8 @@ nav ul{
     list-style-type: none;
     display: flex;
     gap: 40px;
+    margin: 0;
+    padding: 10px 0;
 }
 nav a{
     text-decoration: none;
@@ -49,64 +58,96 @@ nav a{
     object-position: center;
 }
 
-/* Positioning the different headers */
+/* Main content area */
+main{
+    display: contents;
+}
+
+/* Section Grid Position */
+.introduction{
+    grid-row: 2;
+    grid-column: 2 / 3;
+}
+.portfolio{
+    grid-row: 2;
+    grid-column: 4 / 5;
+}
+.schedule{
+    grid-row: 3;
+    grid-column: 4 / 5;
+}
+.assignments{
+    grid-row: 3;
+    grid-column: 2 / 3;
+}
+
+footer{
+    grid-row: 4;
+    grid-column: 3 / 4;
+    text-align: center;
+}
+
+.introduction, .portfolio, .schedule, .assignments, footer{
+    padding-top: 8px;
+    border-top: 5px solid var(--color-accent);
+}
+h2 {
+    font-style: normal;
+    color: var(--color-main-font);
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Dealing with content stuff */
+.introduction div{
+    opacity: 0;
+    transition: opacity 1s;
+}
 #introduction{
-    --pos-top: 10%;
-    --pos-left: 15%;
+    justify-self: center;
+    transition: transform 0.5s, opacity 0.5s;
+    transform-origin: center;
+}
+#introduction:active{
+    transform: scale(0);
+    opacity: 0;
+}
+#introduction:active + div{
+    opacity: 1;
+}
+
+.portfolio div{
+    opacity: 0;
+    transition: opacity 1s;
 }
 #portfolio{
-    --pos-top: 10%;
-    --pos-left: 85%;
+    justify-self: center;
+    transition: transform 0.5s, opacity 0.5s;
+    transform-origin: center;
 }
-#schedule{
-    --pos-top: 60%;
-    --pos-left: 85%;
+#portfolio:hover{
+    transform: scale(0);
+    opacity: 0;
 }
-#assignments{
-    --pos-top: 60%;
-    --pos-left: 15%;
-}
-#contact{
-    --pos-top: 80%;
-    --pos-left: 50%;
-    
+#portfolio:hover + div{
+    opacity: 1;
 }
 
-section h2{
-    position: fixed;    
-    top: var(--pos-top);
-    left: var(--pos-left);
-    transform: translateX(-50%);    /* Makes sure elements are centered */
-    font-style: normal;     /* Normalizes the font style */
-    color: var(--color-main-font);
-    font-size: 3em;
 
-    padding: 5px 70px 5px 70px;
-    border-top: 7px solid var(--color-accent);
-}
-aside h2{
+.schedule div{
+    display: none;
     position: fixed;
-    top: var(--pos-top);
-    left: var(--pos-left);
-    transform: translateX(-50%);    /* Makes sure elements are centered */
-    font-style: normal;     /* Normalizes the font style */
-    color: var(--color-main-font);
-    font-size: 3em;
-
-    padding: 5px 70px 5px 70px;
-    border-top: 7px solid var(--color-accent);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
 }
-
-/* Positioning sections */
-.introduction div{
-    position: fixed;
-    top: 20%;
-    left: 15%;
-    width: 400px;
-    height: 500px;
-    transform: translateX(-50%);
-    
-    color: var(--color-main-font);
-    font-size: 1.5em;
+#schedule:hover + div{
+    display:block;
 }
-
+#schedule-content:hover{
+    display:block
+}
