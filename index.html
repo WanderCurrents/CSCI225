@@ -6,6 +6,11 @@
     <title>CSCI225 Homepage of Andrew Stevens</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="grid-container">
@@ -27,7 +32,12 @@
             <div>
                 <p>Welcome to my page for CSCI225! My name is Andrew Stevens. I am an Applied Computer Science
                     (Cybersecurity) student at USCA. I love computers, art, music, photography, gaming, and nature.
-                    I also love racing, here is a picture I took recently at a race I was a photographer for.</p>
+                    I also love racing. In the background is a picture I took recently at a race I was a photographer
+                    for.</p>
+                <p>I got started in computer science as a child. This is because of my elementary school introducing
+                    programming to me at a young age and also having family that also worked in IT. As a result, I became
+                    interested in computers at a very young age. I am now looking to pursue a career in digital
+                    forensics.</p>
             </div>
         </section>
         <section class="portfolio">
@@ -71,63 +81,62 @@
             <div id="schedule-content">
                 <p>A <del>simple</del> sample schedule is below. <strong><em>For privacy reasons, it is simplified
                             and vague.</em></strong></p>
-                <!-- I know these attributes are deprecated, but they work for this simple page without CSS -->
-                <table border="1">
+                <table id="schedule-table">
                     <tr>
-                        <td width="100" height="25"></td>
-                        <td width="100">Monday</td>
-                        <td width="100">Tuesday</td>
-                        <td width="100">Wednesday</td>
-                        <td width="100">Thursday</td>
-                        <td width="100">Friday</td>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
                     </tr>
                     <tr>
-                        <td height="50">9:00AM</td>
-                        <td rowspan="3" bgcolor="lightblue">Work</td>
-                        <td bgcolor="lightblue">Work</td>
-                        <td rowspan="3" bgcolor="lightblue">Work</td>
-                        <td bgcolor="lightblue">Work</td>
-                        <td rowspan="4" bgcolor="lightblue">Work</td>
+                        <td>9:00AM</td>
+                        <td rowspan="3">Work</td>
+                        <td>Work</td>
+                        <td rowspan="3">Work</td>
+                        <td>Work</td>
+                        <td rowspan="4">Work</td>
                     </tr>
                     <tr>
-                        <td height="50">10:00AM</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td height="50">11:00AM</td>
-                        <td bgcolor="lightgreen">Class</td>
-                        <td bgcolor="lightgreen">Class</td>
-                    </tr>
-                    <tr>
-                        <td height="50">12:00PM</td>
-                        <td bgcolor="lightgreen">Class</td>
-                        <td></td>
-                        <td bgcolor="lightgreen">Class</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td height="50">1:00PM</td>
-                        <td></td>
-                        <td rowspan="3" bgcolor="lightblue">Work</td>
-                        <td></td>
-                        <td rowspan="3" bgcolor="lightblue">Work</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td height="50">2:00PM</td>
-                        <td></td>
+                        <td>10:00AM</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td height="50">3:00PM</td>
+                        <td>11:00AM</td>
+                        <td>Class</td>
+                        <td>Class</td>
+                    </tr>
+                    <tr>
+                        <td>12:00PM</td>
+                        <td>Class</td>
+                        <td></td>
+                        <td>Class</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1:00PM</td>
+                        <td></td>
+                        <td rowspan="3">Work</td>
+                        <td></td>
+                        <td rowspan="3">Work</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2:00PM</td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td height="50">4:00PM</td>
+                        <td>3:00PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4:00PM</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -135,7 +144,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td height="50">5:00PM</td>
+                        <td>5:00PM</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -147,25 +156,30 @@
         </section>
     </main>
     <aside class="assignments">
-        <h2 id="assignments-h">Assignment</h2>
+        <h2 id="assignments">Assignment</h2>
         <div>
             <ol>
                 <li><a href="doc/Assignment1.pdf">Assignment 1</a></li>
+                <li><a href="doc/Assignment2.pdf">Assignment 2</a></li>
                 <li><a href="ContactMe.html">Contact Me</a></li>
             </ol>
         </div>
     </aside>
     <footer>
         <section class="contact">
+            <h2 id="contact"><b>Contact Information</b></h2>
             <address>
-                <h2 id="contact-h"><b>Contact Information</b></h2>
-                <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/"
-                        target="_blank">@andrewstevensphotos</a></p>
-                <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>
+                <div>
+                    <p>Email: <a href="mailto:ads26@usca.edu">ads26@usca.edu</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/andrewstevensphotos/"
+                            target="_blank">@andrewstevensphotos</a></p>
+                </div>
             </address>
         </section>
     </footer>
+    <div id="sliding-footer">
+        <p>&copy; 2026 Andrew Stevens. All rights reserved.</p>
+    </div>
 </body>
 
 </html>

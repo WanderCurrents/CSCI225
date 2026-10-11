@@ -1,14 +1,97 @@
-
 /* Global variables */
 :root{
     --theme-orange: hsl(34, 99%, 36%);
     --theme-white: white;
+    --theme-darker-white: rgb(185, 185, 185);
     --color-nav-bar: var(--theme-orange);
     --color-nav-font: var(--theme-white);
     --color-accent: var(--theme-orange);
     --color-main-font: var(--theme-white);
 }
 
+/* ---Below are related style changes to fit the requirements of the assignment 3 worksheet, may include duplicate selector declarations--- */
+/* Font, color */
+h1,h2,h3,p,li{
+    font-family: 'JetBrains Mono', sans-serif;
+    color: var(--color-main-font);
+    font-weight: normal;
+}
+/* Text */
+a, a:visited, a:active{
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+h1,h2,h3,p,li{
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.603);
+}
+/* Paragraph */
+p{
+    line-height: normal;
+    text-align: start;
+}
+/* Link */
+a, a:visited, a:active{
+    text-decoration: none;
+    color: var(--color-main-font);
+    font-weight: bold;
+}
+a:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+/* List */
+/* Look at navbar & footer stuff section */
+ul {
+  /* Fallback marker if the image doesn't load */
+  list-style-type: square; 
+  
+  /* Path to your custom marker image */
+  list-style-image: url('../img/icons8-code-16.png'); 
+}
+/* Background Image */
+#background-image{
+    position: fixed;
+    top:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* Border */
+/* Look at each .section-class div css entry for border-radius info below*/
+/* Selector Practice */
+p::first-letter{
+    font-size: 2em;
+    font-weight: bold;
+}
+.portfolio p:first-of-type {    /* This is to create the box sahdow for the assignment, didnt do anything visible though */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px; /* Adds space around text so the shadow looks clean */
+}
+#schedule-table tr:nth-child(even) td{
+    background-color: var(--theme-darker-white);
+}
+/* Table */
+#schedule-table, th, td {
+    border: 1px solid var(--theme-orange);
+    justify-self: center;
+    vertical-align: center;
+}
+#schedule-table{
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+th{
+    background-color: var(--theme-orange);
+    color: var(--theme-white)
+}
+td{
+    background-color: var(--theme-white);
+    color: black;
+}
 
 body{
     margin: 0;
@@ -17,11 +100,11 @@ body{
     /* min-height: 100vh; */
     display: grid;
     grid-template-columns: 75px 1fr 2fr 1fr 75px;
-    grid-template-rows: 50px auto auto auto;
+    grid-template-rows: 60px auto 150px 200px 50px;
     row-gap: 30px;
 }
 
-/* Nav bar stuff */
+/* Nav bar & footer stuff */
 .navbar{
     grid-column: 1/-1;
     grid-row: 1;
@@ -47,16 +130,39 @@ nav a{
     font-size: 1.2em;
 }
 
-/* Background image */
-#background-image{
-    position: fixed;
-    top:0;
-    z-index: -1;
+
+#sliding-footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-nav-bar);
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    white-space: nowrap;
+    overflow: hidden;
+    grid-column: 1 / -1;
+    grid-row: 5;
+    min-height: 50px;
 }
+#sliding-footer p{
+    margin: 0;
+    color: var(--color-nav-font);
+    white-space: nowrap;
+    line-height: 1;
+    animation: horizontal-move 8s cubic-bezier(0.25, 1, 0.75, 0) infinite alternate;
+}
+@keyframes horizontal-move {
+    0% {
+        /* Starts perfectly aligned with the left edge of the screen */
+        transform: translateX(0);
+    }
+    100% {
+        /* 
+      Moves the text right by 100% of the screen width (100vw), 
+      minus 100% of its own width so it stops right at the right edge without clipping.
+    */
+        transform: translateX(calc(100vw - 100%));
+    }
+}
+
 
 /* Main content area */
 main{
@@ -105,6 +211,13 @@ h2 {
 .introduction div{
     opacity: 0;
     transition: opacity 1s;
+
+    color: var(--color-main-font);
+    padding: 12px;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(7px);
+    font-size: 0.9em;
 }
 #introduction{
     justify-self: center;
@@ -119,35 +232,116 @@ h2 {
     opacity: 1;
 }
 
-.portfolio div{
-    opacity: 0;
-    transition: opacity 1s;
+
+.portfolio{
+    position: relative;
 }
-#portfolio{
+.portfolio h2{
     justify-self: center;
     transition: transform 0.5s, opacity 0.5s;
     transform-origin: center;
 }
-#portfolio:hover{
-    transform: scale(0);
+.portfolio div{
+    opacity: 0;
+    transition: opacity 1s;
+    color: var(--color-main-font);
+    padding: 2px;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(7px);
+    font-size: 0.75em;
+}
+.portfolio:hover h2 {
+    transform: scale(0.5);
     opacity: 0;
 }
-#portfolio:hover + div{
+.portfolio:hover div {
     opacity: 1;
 }
 
-
 .schedule div{
-    display: none;
     position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    opacity: 0;
+    transition: opacity 1s;
+
+    color: var(--color-main-font);
+    padding: 12px;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(7px);
 }
-#schedule:hover + div{
-    display:block;
+
+
+#schedule{
+    justify-self: center;
+    transition: transform 0.5s, opacity 0.5s;
+    transform-origin: center;
 }
-#schedule-content:hover{
-    display:block
+#schedule:active{
+    transform: scale(0);
+    opacity: 0;
+}
+#schedule:active + div{
+    opacity: 1;
+}
+
+/* Assignments Section Container */
+.assignments {
+    position: relative; /* Ensures proper positioning context */
+}
+.assignments h2 {
+    justify-self: center;
+    transition: transform 0.5s, opacity 0.5s;
+    transform-origin: center;
+}
+.assignments div {
+    opacity: 0;
+    transition: opacity 1s;
+    color: var(--color-main-font);
+    padding: 12px;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(7px);
+}
+/* When hovering anywhere inside the .assignments section */
+.assignments:hover h2 {
+    transform: scale(0.5);
+    opacity: 0;
+}
+.assignments:hover div {
+    opacity: 1;
+}
+
+.contact div{
+    opacity: 0;
+    transition: opacity 1s;
+
+    color: var(--color-main-font);
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(7px);
+}
+#contact{
+    justify-self: center;
+    transition: transform 0.5s, opacity 0.5s;
+    transform-origin: center;
+}
+#contact:active{
+    transform: scale(0.5);
+    opacity: 0;
+}
+#contact:active + address div{
+    opacity: 1;
+}
+
+
+.jetbrains-mono-font {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
